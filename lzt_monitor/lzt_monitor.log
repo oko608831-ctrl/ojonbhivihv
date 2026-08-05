@@ -1,0 +1,217 @@
+2026-08-05 16:30:19,154 INFO     Modo sem webhook (--no-webhook ou URL ausente). Nada será enviado ao Discord.
+2026-08-05 16:30:19,154 INFO     lzt_monitor v1.0.0 iniciado. Busca: https://lzt.market/riot?pmax=50&country[]=bra&knife=1
+2026-08-05 16:30:19,154 INFO     Intervalo: 20.0s (±10%). Webhook: NÃO
+2026-08-05 16:30:20,132 INFO     Desafio DDoS-Guard resolvido (cookie __x atualizado)
+2026-08-05 16:30:25,840 INFO     BASELINE definido com 17 itens (nada foi enviado). Próximos ciclos monitoram mudanças.
+2026-08-05 16:30:49,337 INFO     Ciclo concluído: 17 itens na busca, 17 monitorados
+2026-08-05 16:31:12,903 INFO     Ciclo concluído: 17 itens na busca, 17 monitorados
+2026-08-05 16:31:35,104 INFO     Ciclo concluído: 17 itens na busca, 17 monitorados
+2026-08-05 16:31:55,505 INFO     Ciclo concluído: 17 itens na busca, 17 monitorados
+2026-08-05 16:32:19,485 INFO     Ciclo concluído: 17 itens na busca, 17 monitorados
+2026-08-05 16:32:42,803 INFO     Ciclo concluído: 17 itens na busca, 17 monitorados
+2026-08-05 16:33:05,869 INFO     Ciclo concluído: 17 itens na busca, 17 monitorados
+2026-08-05 16:33:28,403 INFO     Ciclo concluído: 17 itens na busca, 17 monitorados
+2026-08-05 16:33:51,793 INFO     Ciclo concluído: 17 itens na busca, 17 monitorados
+2026-08-05 16:34:14,643 INFO     Ciclo concluído: 17 itens na busca, 17 monitorados
+2026-08-05 16:34:38,646 INFO     Ciclo concluído: 17 itens na busca, 17 monitorados
+2026-08-05 16:34:58,437 INFO     Ciclo concluído: 17 itens na busca, 17 monitorados
+2026-08-05 16:35:24,941 INFO     DROP 251253587: preço 41.12 -> 37.0
+2026-08-05 16:35:24,942 INFO     Ciclo concluído: 17 itens na busca, 17 monitorados
+2026-08-05 16:35:56,579 INFO     Ciclo concluído: 17 itens na busca, 17 monitorados
+2026-08-05 16:36:25,461 INFO     Ciclo concluído: 17 itens na busca, 17 monitorados
+2026-08-05 16:36:46,325 INFO     Ciclo concluído: 17 itens na busca, 17 monitorados
+2026-08-05 16:36:47,917 INFO     Sinal recebido — encerrando com graça
+2026-08-05 16:37:07,076 INFO     Encerrado. Estado salvo em /home/vinicius/lzt_monitor/lzt_state.json
+2026-08-05 16:41:57,670 INFO     Modo sem webhook (--no-webhook ou URL ausente). Nada será enviado ao Discord.
+2026-08-05 16:41:58,482 INFO     Desafio DDoS-Guard resolvido (cookie __x atualizado)
+2026-08-05 16:42:01,450 INFO     Ciclo concluído: 17 itens na busca, 17 monitorados
+2026-08-05 16:48:17,435 INFO     lzt_monitor v1.0.0 iniciado. Busca: https://lzt.market/riot?pmax=50&country[]=bra&knife=1
+2026-08-05 16:48:17,435 INFO     Intervalo: 20.0s (±10%). Webhook: SIM
+2026-08-05 16:48:18,314 INFO     Desafio DDoS-Guard resolvido (cookie __x atualizado)
+2026-08-05 16:48:21,314 INFO     Ciclo concluído: 17 itens na busca, 17 monitorados
+2026-08-05 16:48:43,228 INFO     Ciclo concluído: 17 itens na busca, 17 monitorados
+2026-08-05 16:49:06,287 INFO     Ciclo concluído: 17 itens na busca, 17 monitorados
+2026-08-05 16:50:11,344 INFO     lzt_monitor v1.0.0 iniciado. Busca: https://lzt.market/riot?pmax=50&country[]=bra&knife=1
+2026-08-05 16:50:11,345 INFO     Intervalo: 20.0s (±10%). Webhook: SIM
+2026-08-05 16:50:12,175 INFO     Desafio DDoS-Guard resolvido (cookie __x atualizado)
+2026-08-05 16:50:14,896 INFO     Ciclo concluído: 16 itens na busca, 17 monitorados
+2026-08-05 16:50:37,206 INFO     Ciclo concluído: 16 itens na busca, 17 monitorados
+2026-08-05 16:51:00,754 INFO     Ciclo concluído: 16 itens na busca, 17 monitorados
+2026-08-05 16:51:24,343 INFO     Ciclo concluído: 16 itens na busca, 17 monitorados
+2026-08-05 16:51:48,832 INFO     Ciclo concluído: 16 itens na busca, 17 monitorados
+2026-08-05 16:52:16,418 INFO     Ciclo concluído: 16 itens na busca, 17 monitorados
+2026-08-05 16:52:41,590 INFO     Ciclo concluído: 16 itens na busca, 17 monitorados
+2026-08-05 16:53:07,407 INFO     Ciclo concluído: 16 itens na busca, 17 monitorados
+2026-08-05 16:53:29,306 ERROR    Falha ao enviar novo item 251312082 ao Discord: webhook POST falhou (404): {"message": "404: Not Found", "code": 0}
+2026-08-05 16:53:32,418 INFO     Ciclo concluído: 17 itens na busca, 18 monitorados
+2026-08-05 16:53:36,756 INFO     Sinal recebido — encerrando com graça
+2026-08-05 16:53:51,569 INFO     Encerrado. Estado salvo em /home/vinicius/lzt_monitor/lzt_state.json
+2026-08-05 16:54:10,087 INFO     lzt_monitor v1.0.0 iniciado. Busca: https://lzt.market/riot?pmax=50&country[]=bra&knife=1
+2026-08-05 16:54:10,087 INFO     Intervalo: 20.0s (±10%). Webhook: SIM
+2026-08-05 16:54:10,989 INFO     Desafio DDoS-Guard resolvido (cookie __x atualizado)
+2026-08-05 16:54:17,001 INFO     Ciclo concluído: 16 itens na busca, 18 monitorados
+2026-08-05 16:54:44,337 INFO     Ciclo concluído: 16 itens na busca, 18 monitorados
+2026-08-05 16:55:11,080 INFO     Ciclo concluído: 16 itens na busca, 18 monitorados
+2026-08-05 16:55:46,297 INFO     Ciclo concluído: 16 itens na busca, 18 monitorados
+2026-08-05 16:56:13,930 INFO     Ciclo concluído: 16 itens na busca, 18 monitorados
+2026-08-05 16:56:42,460 INFO     Ciclo concluído: 16 itens na busca, 18 monitorados
+2026-08-05 16:57:06,430 INFO     DROP 251312082: preço 25.7 -> 12.69
+2026-08-05 16:57:13,127 INFO     Ciclo concluído: 16 itens na busca, 18 monitorados
+2026-08-05 16:57:25,517 INFO     Sinal recebido — encerrando com graça
+2026-08-05 16:57:28,661 INFO     Sinal recebido — encerrando com graça
+2026-08-05 16:57:34,195 INFO     Encerrado. Estado salvo em /home/vinicius/lzt_monitor/lzt_state.json
+2026-08-05 16:59:41,514 INFO     Backfill: publicando 18 item(ns) sem mensagem no Discord...
+2026-08-05 16:59:41,866 ERROR    Backfill falhou para o item 251281431: webhook POST falhou (404): {"message": "404: Not Found", "code": 0}
+2026-08-05 16:59:42,212 ERROR    Backfill falhou para o item 251275875: webhook POST falhou (404): {"message": "404: Not Found", "code": 0}
+2026-08-05 16:59:42,565 ERROR    Backfill falhou para o item 251258923: webhook POST falhou (404): {"message": "404: Not Found", "code": 0}
+2026-08-05 16:59:42,909 ERROR    Backfill falhou para o item 251253587: webhook POST falhou (404): {"message": "404: Not Found", "code": 0}
+2026-08-05 16:59:43,387 ERROR    Backfill falhou para o item 244515012: webhook POST falhou (404): {"message": "404: Not Found", "code": 0}
+2026-08-05 16:59:43,738 ERROR    Backfill falhou para o item 250994399: webhook POST falhou (404): {"message": "404: Not Found", "code": 0}
+2026-08-05 16:59:44,083 ERROR    Backfill falhou para o item 251180841: webhook POST falhou (404): {"message": "404: Not Found", "code": 0}
+2026-08-05 16:59:44,426 ERROR    Backfill falhou para o item 251178876: webhook POST falhou (404): {"message": "404: Not Found", "code": 0}
+2026-08-05 16:59:45,005 ERROR    Backfill falhou para o item 250843266: webhook POST falhou (404): {"message": "404: Not Found", "code": 0}
+2026-08-05 16:59:45,347 ERROR    Backfill falhou para o item 250792457: webhook POST falhou (404): {"message": "404: Not Found", "code": 0}
+2026-08-05 16:59:45,705 ERROR    Backfill falhou para o item 250592396: webhook POST falhou (404): {"message": "404: Not Found", "code": 0}
+2026-08-05 16:59:46,049 ERROR    Backfill falhou para o item 250584619: webhook POST falhou (404): {"message": "404: Not Found", "code": 0}
+2026-08-05 16:59:46,388 ERROR    Backfill falhou para o item 250247640: webhook POST falhou (404): {"message": "404: Not Found", "code": 0}
+2026-08-05 16:59:46,765 ERROR    Backfill falhou para o item 250218847: webhook POST falhou (404): {"message": "404: Not Found", "code": 0}
+2026-08-05 16:59:47,117 ERROR    Backfill falhou para o item 249872308: webhook POST falhou (404): {"message": "404: Not Found", "code": 0}
+2026-08-05 16:59:47,464 ERROR    Backfill falhou para o item 249822762: webhook POST falhou (404): {"message": "404: Not Found", "code": 0}
+2026-08-05 16:59:48,051 ERROR    Backfill falhou para o item 248677023: webhook POST falhou (404): {"message": "404: Not Found", "code": 0}
+2026-08-05 16:59:48,394 ERROR    Backfill falhou para o item 251312082: webhook POST falhou (404): {"message": "404: Not Found", "code": 0}
+2026-08-05 16:59:49,197 INFO     Desafio DDoS-Guard resolvido (cookie __x atualizado)
+2026-08-05 16:59:58,636 INFO     Ciclo concluído: 15 itens na busca, 18 monitorados
+2026-08-05 17:00:41,929 INFO     Backfill: publicando 18 item(ns) sem mensagem no Discord...
+2026-08-05 17:00:42,382 INFO     Backfill: item 251281431 publicado (msg 1534652390018515157): Tvmcz | BR | 19 Скинов + 2 Ножа + 4 Платных | XERÃFANG Knife
+2026-08-05 17:00:42,858 INFO     Backfill: item 251275875 publicado (msg 1534652391926796349): 80 Скинов | Vandal Древнее пламя | Phantom Сингулярность | Керамбит Скорость | Нож Жнец | Vandal RGX 11z Pro
+2026-08-05 17:00:43,435 INFO     Backfill: item 251258923 publicado (msg 1534652394057633914): Waiting
+2026-08-05 17:00:43,891 INFO     Backfill: item 251253587 publicado (msg 1534652396389662903): 37 Скинов | Phantom Протокол 781-A | Vandal Champions 2025 | 26375 VP инвентарь | 131 VP | 110 RP | 16 агентов
+2026-08-05 17:00:44,357 INFO     Backfill: item 244515012 publicado (msg 1534652398319173773): 70 Скинов | брелоки | агенты | 3050 VP | 65 VP | 620 RP | 5 ножей | Бразилия | привязка к почте | телефон привязан
+2026-08-05 17:00:44,767 INFO     Backfill: item 250994399 publicado (msg 1534652399841579010): Riot
+2026-08-05 17:00:45,239 INFO     Backfill: item 251180841 publicado (msg 1534652401733337322): 7 Скинов | 96 брелоков | RGX 11z Pro | Ион Phantom | Защитник Sheriff | 9 агентов | Chamber | Killjoy | Cypher
+2026-08-05 17:00:45,745 INFO     Backfill: item 251178876 publicado (msg 1534652403712917546): Vvxbm | BR | 15 Скинов + 1 Нож + 2 Платных | Interhelm Sword
+2026-08-05 17:00:46,199 INFO     Backfill: item 250843266 publicado (msg 1534652406099480798): Xryt | BR | 6 Скинов + 1 Нож + 3 Платных | Equilibrium
+2026-08-05 17:00:46,691 INFO     Backfill: item 250792457 publicado (msg 1534652407940776099): Rand | BR | 4 knives | 61 skins | ~9300 VP
+2026-08-05 17:00:47,279 INFO     Backfill: item 250592396 publicado (msg 1534652410075549858): 34 Скина | Нож "Перелив" | Нож "Боец" | Vandal "Гроза оборотней" | Phantom "Радиояд" | 99 брелоков | 24 агента
+2026-08-05 17:00:47,744 INFO     Backfill: item 250584619 publicado (msg 1534652412579680337): Нож-бабочка Разведка | 8 брелоков | 6 агентов Valorant | 209 скинов LoL | 190+ персонажей LoL
+2026-08-05 17:00:48,209 INFO     Backfill: item 250247640 publicado (msg 1534652414253207554): Zdnbc | BR | 66 Скинов + 3 Ножа | Iridian Thorn Blade, Obsidiana, Overlay Dagger
+2026-08-05 17:00:48,689 INFO     Backfill: item 250218847 publicado (msg 1534652416287572152): 4 Скина | Vandal Ион | Phantom Разведка | ~6100 VP | 281 VP | 115 RP | 13 агентов | Bronze 2 | 48 ур | Бразилия
+2026-08-05 17:00:49,306 INFO     Backfill: item 249872308 publicado (msg 1534652418497843422): Lgsk | BR | 25 Скинов + 2 Ножа | Heart Splitter, Montage Axe
+2026-08-05 17:00:49,746 INFO     Backfill: item 249822762 publicado (msg 1534652420636803087): 19 Скинов | Иридиевая колючка на 6 оружиях | Звездная одиссея x4 | Рунический камень x5 | 90+ брелоков
+2026-08-05 17:00:50,257 INFO     Backfill: item 248677023 publicado (msg 1534652422989811825): Dol | BR | 15 Скинов + 1 Нож | Hieroscape Blades
+2026-08-05 17:00:50,763 INFO     Backfill: item 251312082 publicado (msg 1534652424998879486): 16 Скинов | 1 нож | 48 брелоков | 12 агентов | 74 ур VAL | 345 Radiant Points | Бразилия | 19 ур LoL | 8120 BE
+2026-08-05 17:00:51,614 INFO     Desafio DDoS-Guard resolvido (cookie __x atualizado)
+2026-08-05 17:01:01,211 INFO     Ciclo concluído: 15 itens na busca, 18 monitorados
+2026-08-05 17:01:34,135 INFO     lzt_monitor v1.0.0 iniciado. Busca: https://lzt.market/riot?pmax=50&country[]=bra&knife=1
+2026-08-05 17:01:34,135 INFO     Intervalo: 20.0s (±10%). Webhook: SIM
+2026-08-05 17:01:35,006 INFO     Desafio DDoS-Guard resolvido (cookie __x atualizado)
+2026-08-05 17:01:38,000 INFO     Item 251258923: preço subiu 44.36 -> 44.4
+2026-08-05 17:01:38,001 INFO     Item 251253587: preço subiu 37.0 -> 37.03
+2026-08-05 17:01:38,001 INFO     Item 244515012: preço subiu 48.29 -> 48.34
+2026-08-05 17:01:38,001 INFO     Item 250994399: preço subiu 43.79 -> 43.83
+2026-08-05 17:01:38,001 INFO     Item 251180841: preço subiu 38.01 -> 38.05
+2026-08-05 17:01:38,001 INFO     Item 251178876: preço subiu 47.85 -> 47.89
+2026-08-05 17:01:38,001 INFO     Item 250843266: preço subiu 38.01 -> 38.05
+2026-08-05 17:01:38,001 INFO     Item 250792457: preço subiu 38.58 -> 38.62
+2026-08-05 17:01:38,001 INFO     Item 250592396: preço subiu 41.25 -> 41.29
+2026-08-05 17:01:38,001 INFO     Item 250584619: preço subiu 37.44 -> 37.48
+2026-08-05 17:01:38,001 INFO     Item 250247640: preço subiu 37.69 -> 37.73
+2026-08-05 17:01:38,001 INFO     Item 250218847: preço subiu 38.07 -> 38.11
+2026-08-05 17:01:38,001 INFO     Item 249872308: preço subiu 47.97 -> 48.02
+2026-08-05 17:01:38,001 INFO     Item 249822762: preço subiu 31.67 -> 31.7
+2026-08-05 17:01:38,001 INFO     Item 248677023: preço subiu 35.98 -> 36.02
+2026-08-05 17:01:47,840 INFO     Ciclo concluído: 15 itens na busca, 18 monitorados
+2026-08-05 17:02:18,849 INFO     Ciclo concluído: 15 itens na busca, 18 monitorados
+2026-08-05 17:02:51,600 INFO     Ciclo concluído: 15 itens na busca, 18 monitorados
+2026-08-05 17:03:21,331 INFO     Ciclo concluído: 15 itens na busca, 18 monitorados
+2026-08-05 17:03:51,655 INFO     Ciclo concluído: 15 itens na busca, 18 monitorados
+2026-08-05 17:04:25,394 INFO     Ciclo concluído: 15 itens na busca, 18 monitorados
+2026-08-05 17:05:04,343 INFO     Ciclo concluído: 15 itens na busca, 18 monitorados
+2026-08-05 17:05:34,159 INFO     Ciclo concluído: 15 itens na busca, 18 monitorados
+2026-08-05 17:06:07,546 INFO     Ciclo concluído: 15 itens na busca, 18 monitorados
+2026-08-05 17:06:39,957 INFO     Ciclo concluído: 15 itens na busca, 18 monitorados
+2026-08-05 17:07:11,938 INFO     Ciclo concluído: 15 itens na busca, 18 monitorados
+2026-08-05 17:07:43,387 INFO     Ciclo concluído: 15 itens na busca, 18 monitorados
+2026-08-05 17:08:16,612 INFO     Ciclo concluído: 15 itens na busca, 18 monitorados
+2026-08-05 17:08:49,923 INFO     Ciclo concluído: 15 itens na busca, 18 monitorados
+2026-08-05 17:09:20,534 INFO     Ciclo concluído: 15 itens na busca, 18 monitorados
+2026-08-05 17:09:52,837 INFO     Ciclo concluído: 15 itens na busca, 18 monitorados
+2026-08-05 17:10:23,448 INFO     Ciclo concluído: 15 itens na busca, 18 monitorados
+2026-08-05 17:10:56,223 INFO     Ciclo concluído: 15 itens na busca, 18 monitorados
+2026-08-05 17:11:26,635 INFO     Ciclo concluído: 15 itens na busca, 18 monitorados
+2026-08-05 17:11:57,670 INFO     Ciclo concluído: 15 itens na busca, 18 monitorados
+2026-08-05 17:12:28,283 INFO     Ciclo concluído: 15 itens na busca, 18 monitorados
+2026-08-05 17:12:59,462 INFO     Ciclo concluído: 15 itens na busca, 18 monitorados
+2026-08-05 17:13:31,762 INFO     Ciclo concluído: 15 itens na busca, 18 monitorados
+2026-08-05 17:14:01,500 INFO     Ciclo concluído: 15 itens na busca, 18 monitorados
+2026-08-05 17:14:35,074 INFO     Ciclo concluído: 15 itens na busca, 18 monitorados
+2026-08-05 17:15:05,589 INFO     Ciclo concluído: 15 itens na busca, 18 monitorados
+2026-08-05 17:15:37,491 INFO     Ciclo concluído: 15 itens na busca, 18 monitorados
+2026-08-05 17:16:10,282 INFO     Ciclo concluído: 15 itens na busca, 18 monitorados
+2026-08-05 17:16:43,072 INFO     Ciclo concluído: 15 itens na busca, 18 monitorados
+2026-08-05 17:17:13,386 INFO     Ciclo concluído: 15 itens na busca, 18 monitorados
+2026-08-05 17:17:42,432 INFO     Ciclo concluído: 15 itens na busca, 18 monitorados
+2026-08-05 17:18:21,835 WARNING  Falha de rede (HTTPSConnectionPool(host='lzt.market', port=443): Max retries exceeded with url: /riot?pmax=50&country%5B%5D=bra&knife=1 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7eb4b80c2de0>: Failed to resolve 'lzt.market' ([Errno -3] Temporary failure in name resolution)"))), tentando de novo em 2s
+2026-08-05 17:18:37,889 INFO     NOVO item 251319038 enviado ao Discord (msg 1534656900816175259): 14 Скинов | нож | 40 брелоков | 25 агентов | 485 VP | 320 RP | Bronze 3 ранг | 114 ур | Бразилия
+2026-08-05 17:18:37,890 INFO     DROP 250792457: preço 38.62 -> 37.1
+2026-08-05 17:18:38,280 INFO     Mensagem do item 250792457 atualizada (preço caiu)
+2026-08-05 17:18:47,176 INFO     Ciclo concluído: 16 itens na busca, 19 monitorados
+2026-08-05 17:19:18,654 INFO     Ciclo concluído: 16 itens na busca, 19 monitorados
+2026-08-05 17:19:44,123 INFO     DROP 251319038: preço 19.06 -> 15.88
+2026-08-05 17:19:44,545 INFO     Mensagem do item 251319038 atualizada (preço caiu)
+2026-08-05 17:19:53,589 INFO     Ciclo concluído: 16 itens na busca, 19 monitorados
+2026-08-05 17:22:31,348 INFO     DROP 251319038: preço 15.88 -> 9.53
+2026-08-05 17:22:31,818 INFO     Mensagem do item 251319038 atualizada (preço caiu)
+2026-08-05 17:22:40,868 INFO     Ciclo concluído: 16 itens na busca, 19 monitorados
+2026-08-05 17:23:13,180 INFO     Ciclo concluído: 15 itens na busca, 19 monitorados
+2026-08-05 17:23:45,823 INFO     Ciclo concluído: 15 itens na busca, 19 monitorados
+2026-08-05 17:24:20,509 INFO     Ciclo concluído: 15 itens na busca, 19 monitorados
+2026-08-05 17:24:53,671 INFO     Ciclo concluído: 15 itens na busca, 19 monitorados
+2026-08-05 17:25:29,248 INFO     Ciclo concluído: 15 itens na busca, 19 monitorados
+2026-08-05 17:26:04,873 INFO     Ciclo concluído: 15 itens na busca, 19 monitorados
+2026-08-05 17:26:37,674 INFO     Ciclo concluído: 15 itens na busca, 19 monitorados
+2026-08-05 17:27:13,190 INFO     Ciclo concluído: 15 itens na busca, 19 monitorados
+2026-08-05 17:27:49,685 INFO     Ciclo concluído: 15 itens na busca, 19 monitorados
+2026-08-05 17:28:31,230 INFO     Ciclo concluído: 15 itens na busca, 19 monitorados
+2026-08-05 17:29:03,823 INFO     Ciclo concluído: 15 itens na busca, 19 monitorados
+2026-08-05 17:29:38,500 INFO     Ciclo concluído: 15 itens na busca, 19 monitorados
+2026-08-05 17:30:12,427 INFO     Ciclo concluído: 15 itens na busca, 19 monitorados
+2026-08-05 17:30:46,043 INFO     Ciclo concluído: 15 itens na busca, 19 monitorados
+2026-08-05 17:31:21,649 INFO     Ciclo concluído: 15 itens na busca, 19 monitorados
+2026-08-05 17:31:45,546 INFO     DROP 251253587: preço 37.03 -> 33.29
+2026-08-05 17:31:46,629 INFO     Mensagem do item 251253587 atualizada (preço caiu)
+2026-08-05 17:31:59,027 INFO     Ciclo concluído: 15 itens na busca, 19 monitorados
+2026-08-05 17:32:21,635 INFO     DROP 248677023: preço 36.02 -> 34.24
+2026-08-05 17:32:22,256 INFO     Mensagem do item 248677023 atualizada (preço caiu)
+2026-08-05 17:32:35,519 INFO     Ciclo concluído: 15 itens na busca, 19 monitorados
+2026-08-05 17:33:10,892 INFO     Ciclo concluído: 15 itens na busca, 19 monitorados
+2026-08-05 17:33:47,310 INFO     Ciclo concluído: 15 itens na busca, 19 monitorados
+2026-08-05 17:34:23,913 INFO     Ciclo concluído: 15 itens na busca, 19 monitorados
+2026-08-05 17:35:09,908 WARNING  Falha de rede (HTTPSConnectionPool(host='lzt.market', port=443): Max retries exceeded with url: /251312082/ (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1000)')))), tentando de novo em 2s
+2026-08-05 17:35:18,174 INFO     Ciclo concluído: 15 itens na busca, 19 monitorados
+2026-08-05 17:35:53,325 INFO     Ciclo concluído: 15 itens na busca, 19 monitorados
+2026-08-05 17:36:27,652 INFO     Ciclo concluído: 15 itens na busca, 19 monitorados
+2026-08-05 17:37:04,063 INFO     Ciclo concluído: 15 itens na busca, 19 monitorados
+2026-08-05 17:37:38,560 INFO     Ciclo concluído: 15 itens na busca, 19 monitorados
+2026-08-05 17:38:17,920 INFO     Ciclo concluído: 15 itens na busca, 19 monitorados
+2026-08-05 17:38:40,006 INFO     DROP 249872308: preço 48.02 -> 45.67
+2026-08-05 17:38:40,492 INFO     Mensagem do item 249872308 atualizada (preço caiu)
+2026-08-05 17:38:54,589 INFO     Ciclo concluído: 15 itens na busca, 19 monitorados
+2026-08-05 17:39:32,938 INFO     Ciclo concluído: 15 itens na busca, 19 monitorados
+2026-08-05 17:40:11,390 INFO     Ciclo concluído: 15 itens na busca, 19 monitorados
+2026-08-05 17:40:49,979 INFO     Ciclo concluído: 15 itens na busca, 19 monitorados
+2026-08-05 17:41:10,001 INFO     DROP 250247640: preço 37.73 -> 35.89
+2026-08-05 17:41:10,497 INFO     Mensagem do item 250247640 atualizada (preço caiu)
+2026-08-05 17:41:19,005 INFO     Desafio DDoS-Guard resolvido (cookie __x atualizado)
+2026-08-05 17:41:22,103 INFO     DROP 250247640: preço 37.73 -> 35.89
+2026-08-05 17:41:22,639 INFO     Mensagem do item 250247640 atualizada (preço caiu)
+2026-08-05 17:41:23,758 INFO     Ciclo concluído: 15 itens na busca, 19 monitorados
+2026-08-05 17:41:36,579 INFO     Ciclo concluído: 15 itens na busca, 19 monitorados
+2026-08-05 17:41:46,400 INFO     Testando webhook: envio -> edição -> exclusão
+2026-08-05 17:41:46,993 INFO     Envio OK (msg 1534662728168378441)
+2026-08-05 17:41:48,976 INFO     Edição OK
+2026-08-05 17:41:51,005 INFO     Exclusão OK
+2026-08-05 17:41:56,850 INFO     Ciclo concluído: 15 itens na busca, 19 monitorados
+2026-08-05 17:42:34,161 INFO     Ciclo concluído: 15 itens na busca, 19 monitorados
+2026-08-05 17:43:10,356 INFO     Ciclo concluído: 15 itens na busca, 19 monitorados
+2026-08-05 17:44:04,537 INFO     Ciclo concluído: 15 itens na busca, 19 monitorados
