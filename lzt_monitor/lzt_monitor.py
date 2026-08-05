@@ -39,7 +39,7 @@ from logging.handlers import RotatingFileHandler
 import requests
 from Crypto.Cipher import AES
 
-VERSION = "1.1.0"
+VERSION = "1.2.0"
 
 # ----------------------------------------------------------------------------
 # Configuração
@@ -93,6 +93,23 @@ RU2PT = [
     ("Почтовый домен", "Domínio do e-mail"),
     ("Уровень", "Nível"),
     ("Ножа", "Facas"),
+    ("Скинов", "Skins"),
+    ("Скины", "Skins"),
+    ("Скин", "Skin"),
+    ("скинов", "skins"),
+    ("скины", "skins"),
+    ("скин", "skin"),
+    ("Агентов", "Agentes"),
+    ("Агенты", "Agentes"),
+    ("Агент", "Agente"),
+    ("Привязка", "Vínculo"),
+    ("привязка к почте", "e-mail vinculado"),
+    ("телефон привязан", "telefone vinculado"),
+    ("инвентарь", "inventário"),
+    ("ножей", "facas"),
+    ("уровень", "nível"),
+    ("бразилия", "Brasil"),
+    ("бразил", "Brasil"),
     ("Регион", "Região"),
     ("Страна", "País"),
     ("Сегодня", "Hoje"),
@@ -149,6 +166,62 @@ def clean_html(s):
     s = re.sub(r"<[^>]+>", "", s)
     s = html.unescape(s)
     return re.sub(r"\s+", " ", s).strip()
+
+
+CYRILLIC_RE = re.compile(r"[а-яА-ЯёЁ]")
+_CYR_RUN_RE = re.compile(r"[а-яА-ЯёЁ][а-яА-ЯёЁ\s.,'’\-]*")
+_TRANS_CACHE = {}
+_RUN_CACHE = {}
+
+
+def translate_to_pt(text):
+    """Traduz texto em russo para português (dicionário + API Google gtx).
+
+    Usa primeiro a tabela RU2PT (instantânea e offline); se ainda restar
+    cirílico, chama a API de tradução com cache. Nunca levanta exceção:
+    em caso de falha, devolve o texto com o que o dicionário traduziu.
+    """
+    if not text or not CYRILLIC_RE.search(text):
+        return text
+    cached = _TRANS_CACHE.get(text)
+    if cached is not None:
+        return cached
+    out = translate(text)
+    if not CYRILLIC_RE.search(out):
+        _TRANS_CACHE[text] = out
+        return out
+    # Traduz via API somente os trechos que ainda têm cirílico,
+    # preservando o que o dicionário já traduziu e as siglas latinas
+    # (VP/RP) sem passá-las pelo tradutor (que as corrompe).
+    def _run_pt(ru_run):
+        cached = _RUN_CACHE.get(ru_run)
+        if cached is not None:
+            return cached
+        try:
+            r = requests.get(
+                "https://translate.googleapis.com/translate_a/single",
+                params={"client": "gtx", "sl": "ru", "tl": "pt",
+                        "dt": "t", "q": ru_run},
+                timeout=12,
+                headers={"User-Agent": UA},
+            )
+            r.raise_for_status()
+            parts = r.json()[0]
+            cached = "".join(p[0] for p in parts if p and p[0]).strip()
+        except Exception:
+            cached = ""
+        _RUN_CACHE[ru_run] = cached
+        return cached
+    def _sub_run(m):
+        ru_run = m.group(0)
+        trail = ru_run[len(ru_run.rstrip()):]
+        pt_run = _run_pt(ru_run)
+        if pt_run and not CYRILLIC_RE.search(pt_run):
+            return pt_run + trail
+        return ru_run
+    out = _CYR_RUN_RE.sub(_sub_run, out)
+    _TRANS_CACHE[text] = out
+    return out
 
 
 def fmt_money(value, symbol="R$"):
@@ -228,6 +301,31 @@ class LZTClient:
     def __init__(self):
         self.session = requests.Session()
         self.session.headers.update(HEADERS)
+        # O lzt.market exibe os preços na moeda definida pelo cookie
+        # xf_market_currency. Sem fixar o cookie, o site pode servir os
+        # anúncios em dólar (ou outra moeda) dependendo do visitante;
+        # por isso forçamos BRL (reais) desde o início da sessão.
+        self.session.cookies.set("xf_market_currency", "brl",
+                                 domain="lzt.market", path="/")
+        self._currency_fixed = False
+
+    def _fix_currency_brl(self):
+        """Reforço: confirma a preferência BRL via endpoint oficial do site."""
+        if self._currency_fixed:
+            return
+        self._currency_fixed = True
+        try:
+            r = self.session.post(f"{BASE_URL}/user/0/currency",
+                                  data={"currency": "brl"},
+                                  timeout=REQUEST_TIMEOUT,
+                                  allow_redirects=False)
+            if r.status_code in (200, 301, 302, 303):
+                log.info("Moeda da sessão fixada em BRL (reais)")
+            else:
+                log.warning("Não foi possível confirmar a moeda BRL (HTTP %d)",
+                            r.status_code)
+        except requests.RequestException as e:
+            log.warning("Falha ao confirmar a moeda BRL: %s", e)
 
     def get(self, url):
         """GET com retry em falha de rede e resolução transparente do desafio."""
@@ -254,6 +352,7 @@ class LZTClient:
                 log.info("Desafio DDoS-Guard resolvido (cookie __x atualizado)")
                 time.sleep(1.0)
                 continue
+            self._fix_currency_brl()
             return r
 
 
@@ -400,8 +499,8 @@ def parse_item_page(text):
         name = clean_html(cm.group(3))  # texto do .muted
         if not name or not value:
             continue
-        name = translate(name)
-        value = translate(value)
+        name = translate_to_pt(name)
+        value = translate_to_pt(value)
         if name not in counters:
             counters[name] = value
     d["counters"] = counters
@@ -488,7 +587,7 @@ def build_new_embed(card, detail, entry):
     sym = card.get("currency") or "R$"
     title = f"🆕 Nova listagem · {fmt_money(card.get('price'), sym)}"
     fields = []
-    _add_field(fields, "Título", card.get("title"))
+    _add_field(fields, "Título", translate_to_pt(card.get("title")))
     _add_field(fields, "Preço", fmt_money(card.get("price"), sym))
     _add_field(fields, "Com taxa", fmt_money(card.get("fee_price"), sym))
     _add_field(fields, "Moeda", sym)
@@ -503,27 +602,33 @@ def build_new_embed(card, detail, entry):
 
     badges = classify_badges(card.get("badges") or [])
     if card.get("rank"):
-        _add_field(fields, "Rank", card["rank"])
+        _add_field(fields, "Rank", translate_to_pt(card["rank"]))
     if badges.get("level"):
-        _add_field(fields, "Nível", badges["level"].replace("Уровень", "").strip()
-                   if "Уровень" in badges["level"] else badges["level"])
+        lvl = badges["level"].replace("Уровень", "").strip()
+        _add_field(fields, "Nível", translate_to_pt(lvl))
     if badges.get("region"):
-        _add_field(fields, "Região", translate(badges["region"]))
+        _add_field(fields, "Região", translate_to_pt(badges["region"]))
     if badges.get("inv_value"):
-        _add_field(fields, "Valor do inventário",
-                   translate(badges["inv_value"]))
+        inv = translate_to_pt(badges["inv_value"])
+        for _p in ("Valor do inventário", "Стоимость инвентаря",
+                   "Inventory value"):
+            if inv.startswith(_p):
+                inv = inv[len(_p):].lstrip(" ~:-–—|").strip()
+                break
+        _add_field(fields, "Valor do inventário", inv)
     if badges.get("vp"):
-        _add_field(fields, "VP", badges["vp"])
+        _add_field(fields, "VP", translate_to_pt(badges["vp"]))
     if badges.get("skins"):
-        _add_field(fields, "Skins", badges["skins"])
+        _add_field(fields, "Skins", translate_to_pt(badges["skins"]))
     if badges.get("agents"):
-        _add_field(fields, "Agentes", badges["agents"])
+        _add_field(fields, "Agentes", translate_to_pt(badges["agents"]))
 
     if detail:
         c = detail.get("counters") or {}
         for name, value in c.items():
-            _add_field(fields, name, value)
-        desc = detail.get("description") or ""
+            _add_field(fields, translate_to_pt(name),
+                       translate_to_pt(value))
+        desc = translate_to_pt((detail.get("description") or "")[:1000])
         if len(desc) > 1000:
             desc = desc[:997] + "..."
     else:
@@ -548,7 +653,7 @@ def build_new_embed(card, detail, entry):
 def build_drop_embed(entry, old_price, old_fee, new_price, new_fee):
     sym = entry.get("currency") or "R$"
     fields = []
-    _add_field(fields, "Título", entry.get("title"))
+    _add_field(fields, "Título", translate_to_pt(entry.get("title")))
     _add_field(fields, "Preço antigo", fmt_money(old_price, sym))
     _add_field(fields, "Preço novo", fmt_money(new_price, sym))
     _add_field(fields, "Com taxa (antiga)", fmt_money(old_fee, sym))
@@ -566,13 +671,14 @@ def build_drop_embed(entry, old_price, old_fee, new_price, new_fee):
 def build_sold_embed(entry):
     sym = entry.get("currency") or "R$"
     fields = []
-    _add_field(fields, "Título", entry.get("title"))
+    _add_field(fields, "Título", translate_to_pt(entry.get("title")))
     _add_field(fields, "Preço", fmt_money(entry.get("price"), sym))
     _add_field(fields, "Vendedor", entry.get("seller"))
     _add_field(fields, "Status", "Vendida ou removida do marketplace")
     _add_field(fields, "Link", entry.get("url"), inline=False)
+    _titulo = translate_to_pt(entry.get("title") or "")
     return {
-        "title": f"❌ Vendida/Removida · {(entry.get('title') or '')[:100]}",
+        "title": f"❌ Vendida/Removida · {_titulo[:100]}",
         "color": COLORS["sold"],
         "url": entry.get("url"),
         "footer": {"text": _footer(entry.get("id"))},
