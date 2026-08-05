@@ -1,0 +1,38 @@
+name: lzt-monitor
+
+on:
+  schedule:
+    - cron: "*/10 * * * *"   # a cada 10 min, horário UTC
+  workflow_dispatch:          # botão "Run workflow" na aba Actions
+
+concurrency:
+  group: lzt-monitor
+  cancel-in-progress: false   # evita duas execuções ao mesmo tempo
+
+permissions:
+  contents: write             # necessário para commitar o lzt_state.json
+
+jobs:
+  monitor:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Instala dependências
+        run: pip install requests
+
+      - name: Roda o monitor (verificação única)
+        env:
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+        run: python lzt_monitor/lzt_monitor.py --once
+
+      - name: Salva o estado no repo
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: atualiza lzt_state.json"
+          file_pattern: lzt_state.json
